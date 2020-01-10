@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
- <head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leitfähigkeit bei Salzen</title>
-<style type="text/css">
-<!--
-body {
-height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background: black url(../herrschreibermbs/bg.jpg)  no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
+  <head>
+	<meta charset="utf-8">
+	<link rel="canonical" href="Platzhalter">
+	<link rel="alternate" href="Platzhalter" hreflang="de-DE" />
+	<title>Kram mit Salzen</title>
+	<meta name="description" content="Gib hier deine Lösung ein.">
+  </head>
+  <body>
+    <div class="formitem">
+	<label><input placeholder="Na, weißt du die Lösung?" type="text" name="vorname" id="vorname"></label>
+	<label><button id="textfeld" type="button"> Klick! </button></label>
+    </div>
+	<div class="textfeld-msg"></div>
 
--->
-</style></head>
- </head>
- <body>
-  <form action="" method="post">
-    <table width="100%" border="0" align="center" cellpadding="4" cellspacing="0"> 
-     <tr>
-      <td align="center"><label for="loesen">Gib deine Wahl hier ein!</label></td>
-     </tr>
-     <tr>
-      <td width="200" align="center"><input id="loesen" name="text" type="text" class="loesen" size="9" placeholder="Lösungswort" autofocus />
-      <button  class="loesen2" onclick="submit">></button></td>
-     </tr>
-     <tr>
-      <td align="center"></td>
-     </tr>   
-    </table>
-   </form>
-  <p>Seite abgerufen am 
-  <?php
-    echo date('d.m.Y \u\m H:i:s');
-  ?> 
-  Uhr</p>
- </body>
+	<script>
+        var lsg2 = 'le';
+	var lsg1 = 'Ne';
+	var lsg = lsg1+lsg2;
+	document.querySelector('#textfeld').onclick = function () {
+	if 	(document.querySelector("#vorname").value === lsg) {
+           	window.open('https://www.youtube.com');
+           	}
+	else 	{document.querySelector('.textfeld-msg').innerHTML = 'Falsch';
+		}
+}
+</script>
+  </body>
 </html>
