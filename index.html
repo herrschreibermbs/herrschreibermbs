@@ -10,38 +10,65 @@
 	  <style type="text/css">
 <!--
 body {
-height: 100%;
+  height: 100%;
   width: 100%;
-  padding: 0;
+  line-height: 100px;
+  height: 100px;
   margin: 0;
-  background: black url(../herrschreibermbs/bg.jpg)  no-repeat center center fixed;
+  font-size: 2vw;
+  font-family: sans-serif;
+  text-align: center;
+  background: white url(../herrschreibermbs/bg.jpg)  no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }
-
 -->
 </style>
   </head>
   <body>
     <div class="formitem">
-	<label><input placeholder="Na, weißt du die Lösung?" type="text" name="vorname" id="vorname"></label>
-	<label><button id="textfeld" type="button"> Klick! </button></label>
+	<label><input style="font-size:2vw" placeholder="Na, weißt du die Lösung?" type="text" name="vorname" id="loesung"></label>
+	<label><input style="font-size:2vw" id="textfeld" type="submit" value=" Klick! " target="_self"></label>
     </div>
 	<div class="textfeld-msg"></div>
 
 	<script>
-        var lsg2 = 'le';
-	var lsg1 = 'Ne';
-	var lsg = lsg1+lsg2;
+        var lsg1 = 'M';
+	var lsg3 = 'S';
+	var lsg10 = 'r';
+	var lsg5 = 'B';
+	var lsg6 = 'b';
+	var lsg4 = 's';
+	var lsg2 = 'm';
+	var lsg7 = 'T';
+	var lsg8 = 't';
+	var lsg9 = 'R';
+	var lsg12 = 'k';
+	var lsg11 = 'K';
+	var lsga = lsg1+lsg5+lsg3;
+	var lsgb = lsg2+lsg6+lsg4;
 	document.querySelector('#textfeld').onclick = function () {
-	if 	(document.querySelector("#vorname").value === lsg) {
-           	window.open('https://www.youtube.com');
-           	}
-	else 	{document.querySelector('.textfeld-msg').innerHTML = 'Falsch';
-		}
+	  if 		(document.querySelector("#loesung").value === lsga) {
+           		window.open('https://www.youtube.com');
+           		}
+	  else if 	(document.querySelector("#loesung").value === lsgb) {
+           		window.open('https://www.youtube.com');
+           		}
+	  
+	  else 		{document.querySelector('.textfeld-msg').innerHTML = 'Falsch';
+			}
+        }
+</script>
+<button style="font-size:2vw" onclick="displayDate()"> Wie spät ist es? </button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
 }
 </script>
+
+<p id="demo"></p>
   </body>
 </html>
