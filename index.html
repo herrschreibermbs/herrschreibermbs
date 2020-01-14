@@ -49,14 +49,17 @@ background-size: cover;
 	var lsg11 = 'K';
 	var lsga = lsg1+lsg5+lsg3;
 	var lsgb = lsg2+lsg6+lsg4;
+	var lsgc = lsg1+lsg6+lsg4;
 	document.querySelector('#textfeld').onclick = function () {
 	  if 		(document.querySelector("#loesung").value === lsga) {
-           		window.open('https://www.youtube.com');
+           		window.open('https://www.youtube.com/watch?v=WVBwztPn4Lg');
            		}
 	  else if 	(document.querySelector("#loesung").value === lsgb) {
-           		window.open('https://www.youtube.com');
+           		window.open('https://www.youtube.com/watch?v=WVBwztPn4Lg');
            		}
-	  
+	  else if 	(document.querySelector("#loesung").value === lsgc) {
+           		window.open('https://www.youtube.com/watch?v=WVBwztPn4Lg');
+           		}	  
 	  else 		{document.querySelector('.textfeld-msg').innerHTML = 'Falsch';
 			}
         }
